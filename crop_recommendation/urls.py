@@ -32,5 +32,4 @@ urlpatterns = [
     path('fertilizer_requirement/', fertilizer_views.fertilizer_requirement, name='fertilizer_requirement'),
     path('irrigation_planning/', irrigation_views.irrigation_planning, name='irrigation_planning'),
     path('crop_yield_prediction/', crop_yield_views.crop_yield_prediction, name='crop_yield_prediction'),
-
 ]

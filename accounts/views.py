@@ -35,10 +35,10 @@ def login_page(request):
         pass1 = request.POST.get('pass')  # Get the password from the form
         user = authenticate(request, username=username, password=pass1)  # Authenticate the user
 
-        if user is not None: # If the user is authenticated, log them in and redirect to the home page
+        if user is not None:  # If the user is authenticated, log them in and redirect to the home page
             login(request, user)
             return redirect('home')
-        else: # Otherwise, return an error message
+        else:  # Otherwise, return an error message
             return HttpResponse("Username or Password is incorrect!!!")
 
     return render(request, 'login.html')  # If the request method is GET, return the login page
